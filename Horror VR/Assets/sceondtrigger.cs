@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class sceondtrigger : MonoBehaviour
 {
-    public float pushForce = 10f;  // Si³a wyrzutu
+    /*public float pushForce = 10f;  // Si³a wyrzutu
     public GameObject Enemy1; // Obiekt do wyrzucenia
     public GameObject Enemy2;
 
@@ -22,5 +22,5 @@ public class sceondtrigger : MonoBehaviour
             Enemy1.SetActive(true);
             Enemy2.SetActive(true);
         }
-    }
+    }*/
 }
