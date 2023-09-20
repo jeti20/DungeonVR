@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DeathRoom : MonoBehaviour
 {
+
+    private bool isPlayerInTrigger = false;
+    private bool isAnimationEnded = false;
+
     public string playerTag = "Player"; // Tag gracza
     public Animator[] animators; // Tablica animacji, do której chcesz dodaæ obiekty
-    private bool animacjeWlaczane = false;
+    private bool animationsEnabled = false;
 
     public Animator animatorEndedKillPlayer;
 
+    private void Update()
+    {
+        if (isPlayerInTrigger && isAnimationEnded)
+        {
+            Debug.Log("TheEnd");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !animacjeWlaczane)
+        Debug.Log("PlayerWTrigerze");
+        if (other.CompareTag("Player") && !animationsEnabled)
         {
             // W³¹cz animacje na wszystkich obiektach
             foreach (var animator in animators)
@@ -22,8 +36,8 @@ public class DeathRoom : MonoBehaviour
             }
 
             StartCoroutine(WaitForAnimationAndKillPlayer());
-            animacjeWlaczane = true; // Zapobieganie wielokrotnemu uruchamianiu
-
+            animationsEnabled = true; // Zapobieganie wielokrotnemu uruchamianiu
+            isPlayerInTrigger = true;
         }
     }
 
@@ -31,8 +45,17 @@ public class DeathRoom : MonoBehaviour
     {
         // Poczekaj na zakoñczenie animacji przesuwania œciany.
         yield return new WaitForSeconds(animatorEndedKillPlayer.GetCurrentAnimatorClipInfo(0)[0].clip.length);
-
         // Zabij gracza lub zakoñcz grê.
+        isAnimationEnded = true;
         Debug.Log("TheEnd");
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInTrigger = false;
+            Debug.Log("GraczWyszed³");
+        }
     }
 }
