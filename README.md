@@ -18,6 +18,14 @@ xx.09.2023
 - added room with swinging Hamers, if player is hitted by hamer he die (on console so far, will be improved)
 - next room requires  to add leader, and after that archery room - still in development
 
+18.09.2023
+- DeathRoom - added triger and scrip modif to check if player is still in room when walls anim ends
+- Added Hammers scripts
+
+20.09.2023
+- DeathRomm anim correction (faster)
+- script fix to check if playe is still in the room (exiting, entering again etc.)
+- Added ladders and ability to climb on them
 
 Improvments to do:
 - improve ragdoll on enemy, also make him somehow stronger
