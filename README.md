@@ -27,6 +27,10 @@ xx.09.2023
 - script fix to check if playe is still in the room (exiting, entering again etc.)
 - Added ladders and ability to climb on them
 
+22.09.2023
+- Added new room
+- Added building above the spikes function (xr sockets)
+
 Improvments to do:
 - improve ragdoll on enemy, also make him somehow stronger
 - add some sounds
