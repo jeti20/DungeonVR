@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public int damageomout = 25;
+    public int damageomout = 50;
 
     private void Start()
     {
