@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuGuard : MonoBehaviour
 {
     int HP = 100;
     public Animator animator;
-    [SerializeField] AudioSource killMesound;
+    [SerializeField] AudioSource audioKill;
+    [SerializeField] AudioSource audioHit;
 
-    private void OnTriggerEnter(Collider other)
+    bool isKilled = false;
+
+
+    public void TakeDamage(int damageAmout)
     {
+        HP -= damageAmout;
+        audioHit.Play();
         if (HP <= 0)
         {
             RagdollON ragdollComponent = GetComponent<RagdollON>();
@@ -19,16 +27,28 @@ public class MainMenuGuard : MonoBehaviour
             {
                 ragdollComponent.enabled = true;
                 Debug.Log("W³¹czono komponent RagdollON na obiekcie.");
+                StartCoroutine(LoadSceneDelay());
             }
             else
             {
                 Debug.Log("Nie mo¿na znaleŸæ lub komponent RagdollON jest ju¿ w³¹czony.");
             }
         }
-        else if (other.CompareTag("Weapon"))
+        else
         {
+            if (isKilled == false)
+            {
+                audioKill.Play();
+                isKilled = true;
+            }
             animator.SetBool("isHited", true);
-            killMesound.Play();
+            animator.SetTrigger("damage");
         }
-    }       
+    }
+
+    IEnumerator LoadSceneDelay() 
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Game");
+    }
 }

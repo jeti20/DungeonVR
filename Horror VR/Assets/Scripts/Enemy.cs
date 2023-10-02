@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] AudioSource audioHit;
     public int HP = 100;
     public Animator animator;
 
     public void TakeDamage(int damageAmout)
     {
+        audioHit.Play();
         HP -= damageAmout;
         if (HP <= 0)
         {
