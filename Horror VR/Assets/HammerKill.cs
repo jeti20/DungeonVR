@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class HammerKill : MonoBehaviour
 {
-    
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,4 +14,13 @@ public class HammerKill : MonoBehaviour
             SceneManager.LoadScene("End");
         }
     }
+
+
+    /*private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("End");
+        }
+    }*/
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpikesKorytarzTrigger : MonoBehaviour
 {
@@ -12,5 +13,5 @@ public class SpikesKorytarzTrigger : MonoBehaviour
         {
             animatorSpikesKorytarz.SetBool("TrigerSpikesKorytarz", true);
         }       
-    }
+    }  
 }
