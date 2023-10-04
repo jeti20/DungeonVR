@@ -32,4 +32,7 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("damage");
         }
     }
+
+
+
 }

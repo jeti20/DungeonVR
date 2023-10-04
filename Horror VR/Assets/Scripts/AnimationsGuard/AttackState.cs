@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AttackState : StateMachineBehaviour
 {
@@ -21,6 +22,7 @@ public class AttackState : StateMachineBehaviour
         if (distance > 3.5f)
         {
             animator.SetBool("isAttacking", false);
+            SceneManager.LoadScene("End");
         }
     }
 
