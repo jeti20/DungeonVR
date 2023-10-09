@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class ChaseState : StateMachineBehaviour
 {
@@ -28,8 +29,11 @@ public class ChaseState : StateMachineBehaviour
         if (distance < 2.5f)
         {
             animator.SetBool("isAttacking", true);
+            //SceneManager.LoadScene("End");
+
         }
     }
+
 
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

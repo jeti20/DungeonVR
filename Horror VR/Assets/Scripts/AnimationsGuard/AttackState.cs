@@ -22,7 +22,10 @@ public class AttackState : StateMachineBehaviour
         if (distance > 3.5f)
         {
             animator.SetBool("isAttacking", false);
-            SceneManager.LoadScene("End");
+            if (distance < 3.5f)
+            {
+                //SceneManager.LoadScene("End");
+            }
         }
     }
 

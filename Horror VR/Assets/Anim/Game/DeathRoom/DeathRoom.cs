@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathRoom : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class DeathRoom : MonoBehaviour
     {
         if (isPlayerInTrigger && isAnimationEnded)
         {
-            Debug.Log("TheEnd");
+            SceneManager.LoadScene("End");
         }
     }
 
@@ -47,6 +48,7 @@ public class DeathRoom : MonoBehaviour
         yield return new WaitForSeconds(animatorEndedKillPlayer.GetCurrentAnimatorClipInfo(0)[0].clip.length);
         // Zabij gracza lub zakoñcz grê.
         isAnimationEnded = true;
+        
         Debug.Log("TheEnd");
     }
 

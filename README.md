@@ -31,22 +31,45 @@ xx.09.2023
 - Added new room
 - Added building above the spikes function (xr sockets)
 
+23.09.2023
+- Added ceiling and walls
+- Added scene "End" - pops out after dead 
+
+02.10.2023
+- End scene logic
+
+02.10.2023
+- Upgrade scene logic -> added character to kill to start game
+
+03.10.2023
+- Added death in game (tp player to "End" scene")
+- Added lightinh
+
 Improvments to do:
 - improve ragdoll on enemy, also make him somehow stronger
 - add some sounds
 - The ultimate goal will be to add procedural dungeon creator.
 
+04.10.2023
+- Added background Music
+- Guard animation fix
+- small fixes
+
+09.10.2023
+- Some env fix
+
+DEVELOPMENT ENDED
+
 NOTE: I'm aware that many things can be done here yet. It is still under development.
 
-Strugles:
-- I do not understand why my XR Origin is in random position instead of the position of 0,0,0.
 
 ======================================================
 
-current video: https://youtu.be/pTn8JsYFB3Q
-Old video: https://youtube.com/shorts/ztObEYfLu_0
+Gameplay: https://youtu.be/uj9zUROCdSM
 
 Map
 ![](https://github.com/jeti20/HorrorVR/blob/main/Media/1.PNG)
 ![](https://github.com/jeti20/HorrorVR/blob/main/Media/2.PNG)
+
+
 
