@@ -1,7 +1,7 @@
 # HorrorVR
 
 IMPORTANT HERE IS GDD. 
-https://docs.google.com/document/d/117DjALe7vml5ZTii6y8MHuAvZyw_740zgh4OyoEzvRE/edit#heading=h.h6crl9x252vb
+[https://docs.google.com/document/d/117DjALe7vml5ZTii6y8MHuAvZyw_740zgh4OyoEzvRE/edit#heading=h.h6crl9x252vb](https://docs.google.com/document/d/117DjALe7vml5ZTii6y8MHuAvZyw_740zgh4OyoEzvRE/edit)
 
 xx.09.2023
 - Added level holder
