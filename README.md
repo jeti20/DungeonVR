@@ -71,7 +71,10 @@ NOTE: I'm aware that many things can be done here yet. It is still under develop
 Gameplay: https://youtu.be/uj9zUROCdSM
 
 Map
-![](https://github.com/jeti20/HorrorVR/blob/main/Media/1.PNG)
+![image](https://github.com/user-attachments/assets/3490d4dd-e426-4ac3-b0eb-e9553b33b33f)
+![image](https://github.com/user-attachments/assets/0be45a75-aa0f-4204-843a-37611ad09a32)
+![image](https://github.com/user-attachments/assets/2743c485-93bb-4f8f-b44e-b4fbe62c6d91)
+
 ![](https://github.com/jeti20/HorrorVR/blob/main/Media/2.PNG)
 
 
